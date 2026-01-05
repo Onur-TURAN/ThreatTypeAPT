@@ -1,8 +1,7 @@
 """
 Threat Analysis Engine
 
-Comprehensive malware behavior analysis combining fuzzy logic
-with behavioral indicators and static analysis metrics.
+Malware behavior analysis using fuzzy logic and behavioral indicators.
 """
 
 from typing import Dict, Tuple, List

@@ -1,11 +1,11 @@
 # Threat Type APT - Proje Yapısı ve Kullanım Kılavuzu
 
-## 📂 Klasör Hiyerarşisi
+## Klasör Hiyerarşisi
 
 ```
 ThreatTypeAPT/
 │
-├── main.py                          # ⭐ Ana giriş noktası (sadece utils import eder)
+├── main.py                          # Ana giriş noktası (sadece utils import eder)
 ├── README.md                        # Proje belgesi
 ├── requirements.txt                 # Python bağımlılıkları
 │
@@ -13,7 +13,7 @@ ThreatTypeAPT/
 │   └── utils/                      # Tüm utils kütüphanesi
 │       ├── __init__.py             # utils paketini export eder
 │       │
-│       ├── core/                   # 🔧 Temel fonksiyonlar
+│       ├── core/                   # Temel fonksiyonlar
 │       │   ├── __init__.py
 │       │   ├── fuzzy_system.py     # Fuzzy logic (250+ satır)
 │       │   │   ├── MembershipFunction: Triangular, Trapezoidal, Gaussian
@@ -41,14 +41,14 @@ ThreatTypeAPT/
 │       │       ├── AttackerProfiler: Attacker profil belirleme
 │       │       └── ThreatAnalyzer: Ana analiz engine
 │       │
-│       └── profilers/              # 🤖 GPT-tabanlı profiler
+│       └── profilers/              # GPT-tabanlı profiler
 │           ├── __init__.py
 │           └── gpt_profiler.py     # GPT entegrasyonu (400+ satır)
 │               ├── AttackerProfile: Dataclass
 │               ├── PromptGenerator: Dinamik prompt oluşturma
 │               └── GPTProfiler: OpenAI API entegrasyon
 │
-└── data/                           # 📦 Data yönetimi
+└── data/                           # Data yönetimi
     ├── training_data/              # Training verisi
     │   └── sample_malware_dataset.json
     │       └── 10 malware sample (entropy: 3.8-7.9)
@@ -60,9 +60,9 @@ ThreatTypeAPT/
         └── benign_software_analysis.json
 ```
 
-## 🎯 Modüler Yapı Detayları
+## Modüler Yapı Detayları
 
-### 1️⃣ Core Module (`utils/core/`)
+### Core Module (`utils/core/`)
 
 #### fuzzy_system.py
 - **MembershipFunction**: Üç membership function türü
@@ -103,7 +103,7 @@ ThreatTypeAPT/
 - **DataNormalizer**: Veri normalizasyonu
 - **FormatHelper**: Report ve JSON formatting
 
-### 2️⃣ Models Module (`utils/models/`)
+### Models Module (`utils/models/`)
 
 #### threat_analyzer.py
 - **ThreatAnalysisResult**: Dataclass (12 field)
@@ -121,7 +121,7 @@ ThreatTypeAPT/
 - **ThreatAnalyzer**:
   - `analyze()`: Comprehensive threat analysis
 
-### 3️⃣ Profilers Module (`utils/profilers/`)
+### Profilers Module (`utils/profilers/`)
 
 #### gpt_profiler.py
 - **AttackerProfile**: Result dataclass
@@ -140,7 +140,7 @@ ThreatTypeAPT/
   - `_generate_methodologies()`: Methodology creation
   - `_generate_defensive_measures()`: Defense recommendations
 
-## 💻 Main.py Yapısı
+## main.py Yapısı
 
 ```python
 main.py
@@ -160,7 +160,7 @@ main.py
     └── --packages: Custom packages
 ```
 
-## 📊 Veri Akışı
+## Veri Akışı
 
 ```
 Input Parametreler
@@ -199,7 +199,7 @@ Output
 └─→ GPT profile [OPTIONAL]
 ```
 
-## 🔌 Import Hiyerarşisi
+## Import Hiyerarşisi
 
 ```
 main.py (entry point)
@@ -227,7 +227,7 @@ profilers/__init__.py
 └─→ gpt_profiler
 ```
 
-## 📋 Data Formatı
+## Data Formatı
 
 ### Input Parameters
 ```python
@@ -264,7 +264,7 @@ profilers/__init__.py
 }
 ```
 
-## 🚀 Kullanım Örnekleri
+## Kullanım Örnekleri
 
 ### 1. Temel Kullanım
 ```bash
@@ -290,12 +290,12 @@ python main.py --entropy 7.6 --packages 22 --sample my_malware
 ```
 Özel parametreler ile analiz
 
-## 📦 Bağımlılıklar
+## Bağımlılıklar
 
 - **Core**: Python 3.8+ (built-in libraries only)
 - **Optional**: openai >= 0.27.0 (GPT profiling için)
 
-## ✨ Proje Özellikleri (10x Detaylandırma)
+## Proje Özellikleri (Detaylandırma)
 
 1. **Fuzzy Logic**: 10+ rules, 3 membership function types
 2. **Modular Code**: 3 sub-packages (core, models, profilers)
@@ -310,4 +310,4 @@ python main.py --entropy 7.6 --packages 22 --sample my_malware
 
 ---
 
-**Not**: Proje 3000+ satır yüksek kaliteli Python kodu içerir ve production-ready mimari sağlar.
+Not: Proje üretim ortamına uygun olacak şekilde modüler tasarlandı.

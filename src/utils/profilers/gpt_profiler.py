@@ -1,8 +1,7 @@
 """
 GPT-based Attacker Profile Generation
 
-Uses OpenAI's GPT API to generate detailed attacker profiles
-based on malware analysis metrics.
+OpenAI GPT API integration for detailed attacker profiles based on malware metrics.
 """
 
 import json

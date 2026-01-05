@@ -1,8 +1,7 @@
 """
-Fuzzy Logic System for Advanced Malware Threat Detection
+Fuzzy Logic System for Malware Threat Detection
 
-Handles fuzzy membership functions, set operations, and inference rules
-for comprehensive malware behavior analysis.
+Membership functions, set operations, and inference rules for malware analysis.
 """
 
 import math

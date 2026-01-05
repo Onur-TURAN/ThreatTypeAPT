@@ -1,23 +1,10 @@
 """
 Threat Type APT - Main Entry Point
 
-Advanced malware analysis system combining fuzzy logic inference
-with GPT-based attacker profiling for comprehensive threat intelligence.
+Malware analysis system using fuzzy logic and GPT-based profiling.
 
 Usage:
     python main.py [--sample SAMPLE_NAME] [--json] [--profile] [--api-key API_KEY]
-    
-    python main.py
-        Run with example malware sample
-    
-    python main.py --json
-        Output results as JSON
-    
-    python main.py --profile
-        Generate detailed attacker profile using GPT
-    
-    python main.py --sample my_malware --api-key YOUR_API_KEY
-        Analyze specific sample with GPT profiling
 """
 
 import json

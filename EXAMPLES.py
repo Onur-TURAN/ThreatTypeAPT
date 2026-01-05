@@ -2,17 +2,15 @@
 """
 Threat Type APT - Usage Examples
 
-Bu dosya projenin çeşitli kullanım örneklerini gösterir.
+Proje kullanım örnekleri.
 """
 
-# ============================================================================
-# EXAMPLE 1: Basic Analysis with Default Parameters
-# ============================================================================
+# EXAMPLE 1: Basic Analysis
 
 from src.utils import ThreatAnalyzer, FormatHelper
 
 def example_basic_analysis():
-    """En basit malware analizi"""
+    """Basit malware analizi"""
     
     analyzer = ThreatAnalyzer()
     
@@ -41,9 +39,7 @@ def example_basic_analysis():
     print(f"Attacker Profile: {result.attacker_profile}")
 
 
-# ============================================================================
 # EXAMPLE 2: Full Analysis with All Indicators
-# ============================================================================
 
 def example_full_analysis():
     """Tüm behavioral indicators ile analiz"""
@@ -93,9 +89,7 @@ def example_full_analysis():
         print("  (None)")
 
 
-# ============================================================================
 # EXAMPLE 3: GPT-Based Attacker Profiling
-# ============================================================================
 
 from src.utils import GPTProfiler
 
@@ -138,9 +132,7 @@ def example_gpt_profiling():
         print(f"\nDefensive Measures:\n{profile.defensive_measures}")
 
 
-# ============================================================================
 # EXAMPLE 4: Input Validation
-# ============================================================================
 
 from src.utils import InputValidator
 
@@ -173,9 +165,7 @@ def example_input_validation():
             print(f"  • {error}")
 
 
-# ============================================================================
 # EXAMPLE 5: Batch Analysis
-# ============================================================================
 
 def example_batch_analysis():
     """Birden fazla sample'ı toplu olarak analiz etme"""
@@ -245,9 +235,7 @@ def example_batch_analysis():
         print(f"  {result.sample_name}: {result.threat_score:.2f} ({result.threat_level})")
 
 
-# ============================================================================
 # EXAMPLE 6: Data Normalization
-# ============================================================================
 
 from src.utils import DataNormalizer
 
@@ -271,9 +259,7 @@ def example_data_normalization():
     print(f"Normalized Visibility: {visibility_norm:.2f}")
 
 
-# ============================================================================
 # EXAMPLE 7: Custom JSON Output
-# ============================================================================
 
 import json
 
@@ -305,9 +291,7 @@ def example_json_export():
     print("\n✅ Saved to output.json")
 
 
-# ============================================================================
 # EXAMPLE 8: Fuzzy Membership Inspection
-# ============================================================================
 
 from src.utils import FuzzyInput
 
@@ -329,9 +313,7 @@ def example_fuzzy_membership():
     print(f"\nStrongest Membership: {highest_level}")
 
 
-# ============================================================================
 # EXAMPLE 9: Attacker Profile Inspection
-# ============================================================================
 
 from src.utils import ATTACKER_PROFILES
 
@@ -349,9 +331,7 @@ def example_attacker_profiles():
             print(f"  • {tech}")
 
 
-# ============================================================================
 # EXAMPLE 10: Config Management
-# ============================================================================
 
 from src.utils import GPT_CONFIG, THREAT_THRESHOLDS, ENTROPY_RANGES
 

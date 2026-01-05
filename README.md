@@ -1,21 +1,21 @@
-# 🛡️ Threat Type APT - Advanced Malware Threat Intelligence System
+# Threat Type APT - Advanced Malware Threat Intelligence System
 
-Entropy'e göre fuzzy logic ve GPT tabanlı saldırgan profili analizi yapan ileri malware tehdit analiz sistemi.
+Entropy'ye göre fuzzy logic ve GPT tabanlı saldırgan profili analizi yapan statik malware tehdit analiz sistemi.
 
-## 📋 Proje Özeti
+## Proje Özeti
 
-**Threat Type APT**, statik malware analiz metriklerini kullanarak comprehensive threat assessment yapan bir sistemdir. Fuzzy logic inference, GPT tabanlı profiling ve behavioral analytics'i kombine ederek APT seviyesi tehditleri tespit eder.
+Threat Type APT, statik malware analiz metriklerini kullanarak kapsamlı threat assessment yapan bir sistemdir. Fuzzy logic inference, GPT tabanlı profiling ve behavioral analytics'i birleştirerek APT seviyesi tehditleri tespit eder.
 
-### 🎯 Ana Özellikler
+### Ana Özellikler
 
-- **Fuzzy Logic Inference**: 10+ fuzzy rule ile threat score hesaplaması
-- **Behavioral Analysis**: Suspicious API patterns, registry indicators, network signatures
-- **Attacker Profiling**: Script kiddie'den APT actor'a kadar profil oluşturma
-- **GPT Integration**: Entropy'e göre dinamik prompt'lar ile saldırgan profili analizi
-- **Comprehensive Output**: JSON, formatlanmış rapor ve detaylı IoC prediction
-- **Modular Architecture**: core, models, profilers alt kütüphaneleri
+- Fuzzy logic inference ile 10'dan fazla kural üzerinden threat score hesaplama
+- Davranış analizi: şüpheli API kalıpları, registry göstergeleri, ağ imzaları
+- Saldırgan profili: Script kiddie'den APT actor'a kadar
+- GPT entegrasyonu: entropy'ye göre dinamik prompt'lar ile profil analizi
+- Çıktılar: JSON, formatlanmış rapor ve IoC tahmini
+- Modüler mimari: core, models, profilers alt paketleri
 
-## 📁 Proje Yapısı
+## Proje Yapısı
 
 ```
 ThreatTypeAPT/
@@ -40,7 +40,7 @@ ThreatTypeAPT/
     └── outputs/                     # Analiz çıktıları
 ```
 
-## 🚀 Kurulum ve Kullanım
+## Kurulum ve Kullanım
 
 ### Gereksinimler
 
@@ -65,7 +65,7 @@ python main.py --profile --api-key YOUR_OPENAI_KEY
 python main.py --entropy 7.6 --packages 22 --sample my_malware
 ```
 
-## 📊 Analiz Parametreleri
+## Analiz Parametreleri
 
 | Parametre | Aralık | Açıklama |
 |-----------|--------|----------|
@@ -76,7 +76,7 @@ python main.py --entropy 7.6 --packages 22 --sample my_malware
 | **Code Reuse** | 0-1 | Bilinen malware'e benzerlik |
 | **API Suspicion** | 0-100 | Suspicious API kullanımı |
 
-## 🔍 Fuzzy Logic Rules
+## Fuzzy Logic Kuralları
 
 Sistem 10+ fuzzy rule kullanarak threat score hesaplar:
 
@@ -93,33 +93,33 @@ Rule 9: Many Packages + High Entropy → Complex behavior
 Rule 10: Low indicators → Benign software
 ```
 
-## 👤 Attacker Profiles
+## Attacker Profilleri
 
 Sistem 4 seviye saldırgan profili oluşturur:
 
-### 1. **Script Kiddie** (Threat: 0-40)
+### 1. Script Kiddie (Threat: 0-40)
 - Pre-made tools kullanma
 - Minimal obfuscation
 - Basit malware variants
 
-### 2. **Amateur Attacker** (Threat: 40-60)
+### 2. Amateur Attacker (Threat: 40-60)
 - Temel obfuscation
 - Orta seviye kod karmaşıklığı
 - Custom tool adaptasyonu
 
-### 3. **Professional Attacker** (Threat: 60-80)
+### 3. Professional Attacker (Threat: 60-80)
 - İleri obfuscation
 - Kompleks kontrol akışı
 - Custom payloads
 - Güçlü anti-analysis
 
-### 4. **APT Actor** (Threat: 80-100)
+### 4. APT Actor (Threat: 80-100)
 - Maximum obfuscation
 - Sophisticated techniques
 - Zero-day exploits
 - Multi-stage infections
 
-## 📈 Threat Score Değerlendirmesi
+## Threat Score Değerlendirmesi
 
 | Score | Level | Recommendation |
 |-------|-------|----------------|
@@ -128,43 +128,41 @@ Sistem 4 seviye saldırgan profili oluşturur:
 | **40-69** | MEDIUM | Enhanced monitoring |
 | **0-39** | LOW | Standart güvenlik |
 
-## 🔐 Çıktı Örneği
+## Çıktı Örneği
 
 ```
 ╔════════════════════════════════════════════════════════════════════════╗
 ║                   THREAT TYPE APT ANALYSIS REPORT                      ║
 ╚════════════════════════════════════════════════════════════════════════╝
 
-📋 Sample Information:
+Sample Information:
    Name: ransomware_variant
    
 ┌─ THREAT ASSESSMENT ───────────────────────────────────────────────────┐
-│ ⚠️  Malware Suspicion Score:    86.41 / 100.00
-│ 🎯 Threat Level:               HIGH (Advanced Malware)
-│ 📊 Confidence:                 Very High
-│ 👤 Attacker Profile:          Professional Attacker
+│ Malware Suspicion Score:    86.41 / 100.00
+│ Threat Level:               HIGH (Advanced Malware)
+│ Confidence:                 Very High
+│ Attacker Profile:           Professional Attacker
 └──────────────────────────────────────────────────────────────────────┘
 
 ┌─ BEHAVIORAL INDICATORS ───────────────────────────────────────────────┐
-│ ▶ Advanced obfuscation/packing detected
-│ ▶ High code reuse - matches known malware patterns
-│ ▶ Critical API suspicion - code injection techniques
+│ Advanced obfuscation/packing detected
+│ High code reuse - matches known malware patterns
+│ Critical API suspicion - code injection techniques
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-## 🧬 GPT Profiling
+## GPT Profiling
 
 `--profile` flag'i ile GPT API'ı kullanarak detaylı saldırgan profili oluşturulabilir:
 
-```python
-# Dinamik prompt'lar entropy'e göre
-- **Low Entropy**: Legitimate software VS simple malware
-- **Medium Entropy**: Commodity malware, known variants
-- **High Entropy**: Professional attacks, APT indicators
-- **Very High Entropy**: Nation-state level sophistication
-```
+Dinamik prompt'lar entropy seviyesine göre ayarlanır:
+- Low Entropy: meşru yazılım veya basit malware
+- Medium Entropy: commodity malware, bilinen varyantlar
+- High Entropy: ileri saldırılar, APT göstergeleri
+- Very High Entropy: ileri düzey saldırı teknikleri
 
-## 📊 Data Yönetimi
+## Data Yönetimi
 
 ### Training Data
 `data/training_data/` klasörü 10 malware sample'ı içeren dataset sağlar:
@@ -174,7 +172,7 @@ Sistem 4 seviye saldırgan profili oluşturur:
 ### Output
 Analiz sonuçları JSON formatında `data/outputs/` klasörüne kaydedilir.
 
-## 🛠️ Modular Architecture
+## Modular Architecture
 
 ### Core Module (`utils/core/`)
 - **fuzzy_system.py**: Membership functions ve inference engine
@@ -187,7 +185,7 @@ Analiz sonuçları JSON formatında `data/outputs/` klasörüne kaydedilir.
 ### Profilers Module (`utils/profilers/`)
 - **gpt_profiler.py**: GPT integration ve profil oluşturma
 
-## 🔗 API Integration
+## API Integration
 
 OpenAI API key'i ayarlama:
 
@@ -199,7 +197,7 @@ export OPENAI_API_KEY="your-api-key"
 python main.py --profile --api-key "your-api-key"
 ```
 
-## 📝 JSON Output Format
+## JSON Output Format
 
 ```json
 {
@@ -218,9 +216,9 @@ python main.py --profile --api-key "your-api-key"
 }
 ```
 
-## 🚨 Advanced Features
+## Advanced Features
 
-### 1. **IoC Prediction**
+### 1. IoC Prediction
 Malware davranışına göre tahmin edilen:
 - Network IoCs (C2 domains, ports)
 - File IoCs (paths, extensions)
@@ -228,19 +226,19 @@ Malware davranışına göre tahmin edilen:
 - Registry modifications
 - Behavioral signatures
 
-### 2. **Threat Attribution**
+### 2. Threat Attribution
 - Known malware family matching
 - Threat actor attribution
 - Campaign association
 - Geographic indicators
 
-### 3. **Mitigation Strategy**
+### 3. Mitigation Strategy
 - Immediate response steps
 - Investigation procedures
 - Eradication techniques
 - Long-term prevention
 
-## 🎯 Gelecek Geliştirmeler
+## Gelecek Geliştirmeler
 
 - [ ] Machine Learning model entegrasyonu
 - [ ] YARA rule generation
@@ -249,14 +247,14 @@ Malware davranışına göre tahmin edilen:
 - [ ] Real-time malware monitoring
 - [ ] Collaborative threat sharing
 
-## 📄 Lisans
+## Lisans
 
 MIT License
 
-## 👨‍💻 Yazarlar
+## Yazar
 
 Threat Type APT - Advanced Malware Analysis System
 
 ---
 
-**Not**: Bu sistem eğitim ve araştırma amaçlı geliştirilmiştir. Fuzzy logic ve GPT modeli kombinasyonu ile malware tehdidi değerlendirmesi yapılmaktadır.
+Not: Bu sistem eğitim ve araştırma amaçlı geliştirilmiştir. Fuzzy logic ve GPT modeli kombinasyonu ile malware tehdidi değerlendirmesi yapılmaktadır.
