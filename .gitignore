@@ -1,0 +1,25 @@
+*.png
+*.pkl
+*.jpg
+*.jpeg
+*.json
+*.csv
+*.txt
+*.log
+# Exception: include CSV files in data/pattern/
+!data/pattern/*.csv
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.lzma
+*.tar.lz
+*.tar.zst
+*.tar.sz
+*.pyc
+*.pyo
+*.pyd
+*.egg-info
+*.egg
+*.rar
