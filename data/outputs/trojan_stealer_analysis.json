@@ -1,0 +1,41 @@
+{
+  "analysis": {
+    "sample_name": "trojan_stealer",
+    "threat_score": 44.87615384615385,
+    "threat_level": "MEDIUM",
+    "confidence": "Medium",
+    "entropy": 6.2,
+    "packages": 18,
+    "controlflow": 6.8,
+    "string_visibility": 0.28,
+    "code_reuse": 0.62,
+    "api_suspicion": 75.0,
+    "attacker_profile": "amateur_attacker",
+    "behavioral_indicators": [
+      "Code obfuscation techniques present",
+      "Likely anti-analysis mechanisms",
+      "Moderate code reuse detected",
+      "Possible known malware variant",
+      "High API suspicion - privilege escalation attempt",
+      "Suspicious system-level operations detected"
+    ],
+    "detected_apis": {
+      "process_injection": [
+        "CreateRemoteThread",
+        "WriteProcessMemory"
+      ],
+      "privilege_escalation": [
+        "CreateProcessAsUserA",
+        "CreateProcessAsUserW"
+      ],
+      "file_operations": [
+        "CreateFileA",
+        "CreateFileW"
+      ]
+    },
+    "registry_indicators": [],
+    "network_indicators": [],
+    "analysis_timestamp": "2026-01-07T03:13:32.286816"
+  },
+  "attacker_profile": null
+}

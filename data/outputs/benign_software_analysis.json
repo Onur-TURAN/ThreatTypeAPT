@@ -1,0 +1,21 @@
+{
+  "analysis": {
+    "sample_name": "benign_software",
+    "threat_score": 13.733333333333334,
+    "threat_level": "LOW",
+    "confidence": "Very High",
+    "entropy": 2.5,
+    "packages": 5,
+    "controlflow": 1.8,
+    "string_visibility": 0.89,
+    "code_reuse": 0.05,
+    "api_suspicion": 10.0,
+    "attacker_profile": "script_kiddie",
+    "behavioral_indicators": [],
+    "detected_apis": {},
+    "registry_indicators": [],
+    "network_indicators": [],
+    "analysis_timestamp": "2026-01-07T03:13:32.289770"
+  },
+  "attacker_profile": null
+}

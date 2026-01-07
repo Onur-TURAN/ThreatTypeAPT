@@ -1,0 +1,41 @@
+{
+  "analysis": {
+    "sample_name": "ransomware_variant",
+    "threat_score": 40.83108974358975,
+    "threat_level": "MEDIUM",
+    "confidence": "Medium",
+    "entropy": 7.6,
+    "packages": 22,
+    "controlflow": 8.5,
+    "string_visibility": 0.12,
+    "code_reuse": 0.85,
+    "api_suspicion": 92.0,
+    "attacker_profile": "amateur_attacker",
+    "behavioral_indicators": [
+      "Advanced obfuscation/packing detected",
+      "Possible polymorphic/metamorphic malware",
+      "High code reuse - matches known malware patterns",
+      "Likely derivative of existing malware family",
+      "Critical API suspicion - code injection techniques",
+      "Likely process hollowing or DLL injection"
+    ],
+    "detected_apis": {
+      "process_injection": [
+        "CreateRemoteThread",
+        "WriteProcessMemory"
+      ],
+      "privilege_escalation": [
+        "CreateProcessAsUserA",
+        "CreateProcessAsUserW"
+      ],
+      "file_operations": [
+        "CreateFileA",
+        "CreateFileW"
+      ]
+    },
+    "registry_indicators": [],
+    "network_indicators": [],
+    "analysis_timestamp": "2026-01-07T03:13:32.284869"
+  },
+  "attacker_profile": null
+}

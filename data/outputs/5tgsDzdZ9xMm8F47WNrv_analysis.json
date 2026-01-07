@@ -1,0 +1,25 @@
+{
+  "sample_name": "5tgsDzdZ9xMm8F47WNrv",
+  "threat_score": 35.88666666666666,
+  "threat_level": "LOW",
+  "confidence": "High",
+  "entropy": 6.5,
+  "packages": 150,
+  "controlflow": 6.0,
+  "string_visibility": 0.3,
+  "code_reuse": 0.6,
+  "api_suspicion": 65.0,
+  "attacker_profile": "script_kiddie",
+  "behavioral_indicators": [
+    "Code obfuscation techniques present",
+    "Likely anti-analysis mechanisms",
+    "Moderate code reuse detected",
+    "Possible known malware variant",
+    "High API suspicion - privilege escalation attempt",
+    "Suspicious system-level operations detected"
+  ],
+  "detected_apis": {},
+  "registry_indicators": [],
+  "network_indicators": [],
+  "analysis_timestamp": "2026-01-07T03:23:21.410391"
+}

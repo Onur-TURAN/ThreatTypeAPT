@@ -1,0 +1,18 @@
+{
+  "sample_name": "9e9c93588d95c5dafd079e6a92e1698419793c2240ecbc516a525eee552127bd",
+  "threat_score": 1.032000000000001,
+  "threat_level": "LOW",
+  "confidence": "Very High",
+  "entropy": 4.554675579071045,
+  "packages": 1,
+  "controlflow": 5.0,
+  "string_visibility": 0.092,
+  "code_reuse": 0.3,
+  "api_suspicion": 56.93344473838806,
+  "attacker_profile": "script_kiddie",
+  "behavioral_indicators": [],
+  "detected_apis": {},
+  "registry_indicators": [],
+  "network_indicators": [],
+  "analysis_timestamp": "2026-01-07T03:23:42.214905"
+}

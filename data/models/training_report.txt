@@ -1,0 +1,78 @@
+
+======================================================================
+FUZZY LOGIC THREAT ANALYZER - TRAINING REPORT
+======================================================================
+
+Training Date: 2026-01-07 03:23:08
+
+DATASET SUMMARY
+===============
+Training Samples: 8854
+Test Samples: 2214
+Total Samples: 11068
+
+TRAINING STATISTICS
+===================
+
+Entropy:
+  Mean: 6.489
+  Std Dev: 0.111
+  Range: 3.45 - 6.58
+  Median: 6.50
+
+Packages:
+  Mean: 150
+  Std Dev: 30
+  Range: 1 - 2225
+
+API Suspicion:
+  Mean: 64.90
+  Std Dev: 4.09
+  Range: 0.63 - 100.00
+
+MODEL PERFORMANCE
+=================
+Accuracy:  80.00%
+Precision: 0.00%
+Recall:    0.00%
+F1-Score:  0.00%
+
+Confusion Matrix:
+  True Positives:  0
+  True Negatives:  40
+  False Positives: 0
+  False Negatives: 10
+
+FUZZY LOGIC RULES APPLIED
+==========================
+1. IF entropy IS HIGH AND api_suspicion IS HIGH
+   THEN threat_level IS CRITICAL
+   
+2. IF entropy IS MEDIUM AND api_suspicion IS MEDIUM
+   THEN threat_level IS MEDIUM
+   
+3. IF entropy IS LOW AND api_suspicion IS LOW
+   THEN threat_level IS LOW
+   
+4. IF code_reuse IS HIGH AND api_suspicion IS LOW
+   THEN attacker_profile IS SCRIPT_KIDDIE
+
+THREAT LEVEL THRESHOLDS
+=======================
+LOW:      < 25
+MEDIUM:   25 - 50
+HIGH:     50 - 75
+CRITICAL: > 75
+
+MODEL DEPLOYMENT
+================
+Model Type: Fuzzy Logic Inference System
+Location: data/models/threat_model.json
+Status: READY FOR DEPLOYMENT
+
+Next Steps:
+  1. Use trained model: python main.py --dataset data/training_data/test_data.csv
+  2. Analyze new samples: python main.py --dataset <new_samples.csv>
+  3. Monitor model performance in production
+
+======================================================================

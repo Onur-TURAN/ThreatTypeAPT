@@ -1,0 +1,36 @@
+{
+  "sample_name": "ec2909bd235ec17d561de3262ac8ca45eaf5f9fc58898cda64fed59dbb030bb0",
+  "threat_score": 42.294125375747676,
+  "threat_level": "MEDIUM",
+  "confidence": "Medium",
+  "entropy": 6.564733505249023,
+  "packages": 8,
+  "controlflow": 5.0,
+  "string_visibility": 1.0,
+  "code_reuse": 0.008,
+  "api_suspicion": 82.0591688156128,
+  "attacker_profile": "amateur_attacker",
+  "behavioral_indicators": [
+    "Code obfuscation techniques present",
+    "Likely anti-analysis mechanisms",
+    "Critical API suspicion - code injection techniques",
+    "Likely process hollowing or DLL injection"
+  ],
+  "detected_apis": {
+    "process_injection": [
+      "CreateRemoteThread",
+      "WriteProcessMemory"
+    ],
+    "privilege_escalation": [
+      "CreateProcessAsUserA",
+      "CreateProcessAsUserW"
+    ],
+    "file_operations": [
+      "CreateFileA",
+      "CreateFileW"
+    ]
+  },
+  "registry_indicators": [],
+  "network_indicators": [],
+  "analysis_timestamp": "2026-01-07T03:23:20.723180"
+}

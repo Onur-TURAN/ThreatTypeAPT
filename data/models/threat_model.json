@@ -1,0 +1,144 @@
+{
+  "model_type": "Fuzzy Logic Inference System",
+  "trained_at": "2026-01-07T03:23:08.511385",
+  "training_samples": 8854,
+  "test_samples": 2214,
+  "training_statistics": {
+    "entropy": {
+      "mean": 6.488884713801204,
+      "std": 0.11144355293740833,
+      "min": 3.446985244750976,
+      "max": 6.584449582535646,
+      "quantiles": {
+        "25": 6.5,
+        "50": 6.5,
+        "75": 6.5
+      }
+    },
+    "packages": {
+      "mean": 149.958210978089,
+      "std": 29.672020381946243,
+      "min": 1.0,
+      "max": 2225.0
+    },
+    "api_suspicion": {
+      "mean": 64.89552924093654,
+      "std": 4.094022806182284,
+      "min": 0.6254994869232178,
+      "max": 100.0
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.8,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "tp": 0,
+    "tn": 40,
+    "fp": 0,
+    "fn": 10
+  },
+  "fuzzy_rules": [
+    {
+      "id": 1,
+      "condition": "High entropy AND high api_suspicion",
+      "consequence": "Threat = CRITICAL",
+      "description": "Advanced malware characteristics"
+    },
+    {
+      "id": 2,
+      "condition": "Medium entropy AND medium api_suspicion",
+      "consequence": "Threat = MEDIUM",
+      "description": "Organized crime malware"
+    },
+    {
+      "id": 3,
+      "condition": "Low entropy AND low api_suspicion",
+      "consequence": "Threat = LOW",
+      "description": "Benign or low-risk software"
+    },
+    {
+      "id": 4,
+      "condition": "High code_reuse AND low api_suspicion",
+      "consequence": "Profile = Script Kiddie",
+      "description": "Reused known exploit code"
+    }
+  ],
+  "membership_functions": {
+    "entropy": {
+      "LOW": {
+        "range": [
+          0,
+          3
+        ],
+        "center": 1.5
+      },
+      "MEDIUM": {
+        "range": [
+          3,
+          6
+        ],
+        "center": 4.5
+      },
+      "HIGH": {
+        "range": [
+          6,
+          8
+        ],
+        "center": 7
+      }
+    },
+    "api_suspicion": {
+      "LOW": {
+        "range": [
+          0,
+          33
+        ],
+        "center": 16
+      },
+      "MEDIUM": {
+        "range": [
+          33,
+          67
+        ],
+        "center": 50
+      },
+      "HIGH": {
+        "range": [
+          67,
+          100
+        ],
+        "center": 84
+      }
+    },
+    "packages": {
+      "FEW": {
+        "range": [
+          1,
+          100
+        ],
+        "center": 50
+      },
+      "MODERATE": {
+        "range": [
+          100,
+          500
+        ],
+        "center": 300
+      },
+      "MANY": {
+        "range": [
+          500,
+          5000
+        ],
+        "center": 2500
+      }
+    }
+  },
+  "model_parameters": {
+    "threat_threshold_low_medium": 25,
+    "threat_threshold_medium_high": 50,
+    "threat_threshold_high_critical": 75,
+    "confidence_weight": 0.85
+  }
+}

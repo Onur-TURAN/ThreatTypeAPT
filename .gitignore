@@ -1,14 +1,34 @@
-*.png
+# Python
+*.pyc
+*.pyo
+*.pyd
+*.egg-info
+*.egg
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Data files - exclude large datasets
+data/archive/train_features.csv
+data/archive/*.7z
+data/malware-classification/*.7z
+data/malware-classification/train.7z
+data/malware-classification/test.7z
+
+# But keep training data and model outputs
+!data/training_data/train_data.csv
+!data/training_data/test_data.csv
+!data/models/
+!data/outputs/
+
+# Cache files
+*.cache
 *.pkl
-*.jpg
-*.jpeg
-*.json
-*.csv
-*.txt
-*.log
-# Exception: include CSV files in data/pattern/
-!data/pattern/*.csv
+
+# Compressed files
 *.zip
+*.rar
 *.tar
 *.tar.gz
 *.tar.bz2
@@ -17,9 +37,7 @@
 *.tar.lz
 *.tar.zst
 *.tar.sz
-*.pyc
-*.pyo
-*.pyd
-*.egg-info
-*.egg
-*.rar
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+{
+  "sample_name": "369e14ae364abbb009069e48ce3f4c69f25147e4b87f45355f03ab4779238820",
+  "threat_score": 16.23424908876419,
+  "threat_level": "LOW",
+  "confidence": "Very High",
+  "entropy": 5.163405895233154,
+  "packages": 1,
+  "controlflow": 5.0,
+  "string_visibility": 1.0,
+  "code_reuse": 0.001,
+  "api_suspicion": 64.54257369041443,
+  "attacker_profile": "script_kiddie",
+  "behavioral_indicators": [
+    "High API suspicion - privilege escalation attempt",
+    "Suspicious system-level operations detected"
+  ],
+  "detected_apis": {},
+  "registry_indicators": [],
+  "network_indicators": [],
+  "analysis_timestamp": "2026-01-07T03:23:42.200903"
+}

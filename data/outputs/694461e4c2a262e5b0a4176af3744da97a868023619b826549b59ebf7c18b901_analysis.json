@@ -1,0 +1,34 @@
+{
+  "sample_name": "694461e4c2a262e5b0a4176af3744da97a868023619b826549b59ebf7c18b901",
+  "threat_score": 23.67035499572754,
+  "threat_level": "LOW",
+  "confidence": "High",
+  "entropy": 5.7015228271484375,
+  "packages": 422,
+  "controlflow": 5.0,
+  "string_visibility": 1.0,
+  "code_reuse": 0.422,
+  "api_suspicion": 71.26903533935547,
+  "attacker_profile": "script_kiddie",
+  "behavioral_indicators": [
+    "Code obfuscation techniques present",
+    "Likely anti-analysis mechanisms",
+    "Moderate code reuse detected",
+    "Possible known malware variant",
+    "High API suspicion - privilege escalation attempt",
+    "Suspicious system-level operations detected"
+  ],
+  "detected_apis": {
+    "process_injection": [
+      "CreateRemoteThread",
+      "WriteProcessMemory"
+    ],
+    "privilege_escalation": [
+      "CreateProcessAsUserA",
+      "CreateProcessAsUserW"
+    ]
+  },
+  "registry_indicators": [],
+  "network_indicators": [],
+  "analysis_timestamp": "2026-01-07T03:23:20.783029"
+}

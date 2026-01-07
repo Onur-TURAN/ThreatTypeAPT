@@ -1,0 +1,21 @@
+{
+  "sample_name": "f81dc85200cfc2bdfcb5db8c41ccd8d272d7e6d03d4cf096c90b7f191079435e",
+  "threat_score": 16.472833251953126,
+  "threat_level": "LOW",
+  "confidence": "Very High",
+  "entropy": 5.7881317138671875,
+  "packages": 105,
+  "controlflow": 5.0,
+  "string_visibility": 1.0,
+  "code_reuse": 0.105,
+  "api_suspicion": 2.8940658569335938,
+  "attacker_profile": "script_kiddie",
+  "behavioral_indicators": [
+    "Code obfuscation techniques present",
+    "Likely anti-analysis mechanisms"
+  ],
+  "detected_apis": {},
+  "registry_indicators": [],
+  "network_indicators": [],
+  "analysis_timestamp": "2026-01-07T03:23:42.237904"
+}

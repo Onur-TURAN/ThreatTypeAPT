@@ -1,0 +1,32 @@
+{
+  "sample_name": "0936774432c9726f37361073af8b4b62ae2fd7f9357716b8a7f4d8f51a3b3124",
+  "threat_score": 27.3015748000145,
+  "threat_level": "LOW",
+  "confidence": "High",
+  "entropy": 5.8698296546936035,
+  "packages": 270,
+  "controlflow": 5.0,
+  "string_visibility": 1.0,
+  "code_reuse": 0.27,
+  "api_suspicion": 73.37287068367004,
+  "attacker_profile": "script_kiddie",
+  "behavioral_indicators": [
+    "Code obfuscation techniques present",
+    "Likely anti-analysis mechanisms",
+    "High API suspicion - privilege escalation attempt",
+    "Suspicious system-level operations detected"
+  ],
+  "detected_apis": {
+    "process_injection": [
+      "CreateRemoteThread",
+      "WriteProcessMemory"
+    ],
+    "privilege_escalation": [
+      "CreateProcessAsUserA",
+      "CreateProcessAsUserW"
+    ]
+  },
+  "registry_indicators": [],
+  "network_indicators": [],
+  "analysis_timestamp": "2026-01-07T03:23:42.238905"
+}
